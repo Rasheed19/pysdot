@@ -41,7 +41,7 @@ jobs:
         uses: pypa/cibuildwheel@v4.2.1
         env:
           CIBW_BUILD: "cp311-* cp312-* cp313-* cp314-*"
-          CIBW_TEST_COMMAND: "python -m unittest discover -s {project}/tests -v"
+          CIBW_TEST_COMMAND: "python -m unittest discover {project}/tests"
 
       - name: Upload wheels
         uses: actions/upload-artifact@v4
