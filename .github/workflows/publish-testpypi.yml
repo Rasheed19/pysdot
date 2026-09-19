@@ -40,7 +40,7 @@ jobs:
       - name: Build wheels
         uses: pypa/cibuildwheel@v4.2.1
         env:
-          CIBW_BUILD: "cp311-* cp312-* cp313-* cp314-*"
+          CIBW_BUILD: "cp312-* cp313-* cp314-*"
           CIBW_TEST_REQUIRES: "scipy matplotlib"
           CIBW_TEST_COMMAND: "python -m unittest discover {project}/tests"
 
